@@ -1,0 +1,41 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package nomor1;
+
+import java.util.*;
+
+public class Fibonacci {
+    
+    
+    public static void main(String[] args) {
+      System.out.print(" Input jumlah bilangan fibonacci : ");
+    Scanner inputFibonacci= new Scanner(System.in);
+    
+    int fibonaccicount = inputFibonacci.nextInt();
+    for (int i = 0 ; i <= fibonaccicount; i++) {
+        System.out.print(methodFibonacci(fibonaccicount-i));
+        System.out.print(" ");
+       
+    }
+   /* int hasil =0;
+        for (int i = 1; i <=fibonaccicount; i++) {
+        hasil = hasil + methodFibonacci(i);
+        }
+        System.out.println(" hasil : "+ hasil);
+    }*/
+    }
+    private static int methodFibonacci(int input) {
+    int i;
+    int n = input;
+        if (n<0|| n<=1) {
+            return n;
+        }
+        else{
+            return methodFibonacci(n-2)+methodFibonacci(n-1);
+        }
+    }
+}
