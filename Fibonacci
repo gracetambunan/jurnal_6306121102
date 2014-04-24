@@ -9,6 +9,8 @@ package nomor1;
 import java.util.*;
 
 public class Fibonacci {
+    
+    
     public static void main(String[] args) {
       System.out.println(" Input jumlah bilangan fibonacci : ");
     Scanner inputFibonacci= new Scanner(System.in);
@@ -17,10 +19,14 @@ public class Fibonacci {
     for (int i = 1; i <= fibonaccicount; i++) {
         System.out.print(methodFibonacci(i));
         System.out.print(" ");
-        
-      
+       
     }
-}
+    int hasil =0;
+        for (int i = 1; i <=fibonaccicount; i++) {
+        hasil = hasil + methodFibonacci(i);
+        }
+        System.out.println(" hasil : "+ hasil);
+    }
     private static int methodFibonacci(int input) {
     int i;
     int n = input;
